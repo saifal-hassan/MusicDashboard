@@ -2,7 +2,7 @@
 Table listeningData;
 
 float graphLeft = 90;
-float graphRight = 1140;
+float graphRight = 900;
 float graphTop = 110;
 float graphBottom = 680;
 
@@ -45,7 +45,7 @@ void draw() {
   textSize(13);
   text("Music listening history | October 19-29, 2026", 90, 75);
 
-  // Lines along each axis i have to draw
+  // Lines along each axis
   stroke(65);
   fill(190);
   textSize(12);
@@ -70,7 +70,6 @@ void draw() {
     text(day, x, graphBottom + 22);
   }
 
-  
   fill(220);
   textSize(14);
   text("Date (October 2026)",
@@ -82,6 +81,9 @@ void draw() {
   text("Minutes Listened", 0, 0);
   popMatrix();
 
+  // Genre key in the top right
+  drawGenreKey();
+
   String hoveredSong = "";
   String hoveredArtist = "";
   String hoveredGenre = "";
@@ -90,7 +92,7 @@ void draw() {
 
   boolean songHovered = false;
 
-  // This reeads and draws every observation
+  // This reads and draws every observation
   for (int i = 0; i < listeningData.getRowCount(); i++) {
 
     TableRow row = listeningData.getRow(i);
@@ -101,7 +103,7 @@ void draw() {
     String genre = row.getString("Genre");
     String duration = row.getString("minutesListened");
 
-    // I implemented a use case where duration is negligible
+    // Skip observations without a listening duration
     if (duration == null || duration.trim().length() == 0) {
       continue;
     }
@@ -188,4 +190,75 @@ void draw() {
     text("Duration: " + hoveredDuration + " minutes",
          tooltipX + 12, tooltipY + 102);
   }
+}
+
+
+// Displays the genre key
+void drawGenreKey() {
+
+  fill(255);
+  textSize(14);
+  textAlign(LEFT);
+  text("GENRE KEY", 940, 120);
+
+  // Rage
+  fill(235, 75, 75);
+  circle(950, 150, 10);
+  fill(220);
+  textSize(12);
+  text("Rage", 965, 154);
+
+  // Trap
+  fill(65, 145, 235);
+  circle(950, 180, 10);
+  fill(220);
+  text("Trap", 965, 184);
+
+  // Ambient
+  fill(155, 105, 225);
+  circle(950, 210, 10);
+  fill(220);
+  text("Ambient", 965, 214);
+
+  // Alternative rap
+  fill(235, 165, 65);
+  circle(950, 240, 10);
+  fill(220);
+  text("Alternative rap", 965, 244);
+
+  // EDM
+  fill(55, 205, 180);
+  circle(950, 270, 10);
+  fill(220);
+  text("EDM", 965, 274);
+
+  // Dancehall
+  fill(235, 105, 170);
+  circle(950, 300, 10);
+  fill(220);
+  text("Dancehall", 965, 304);
+
+  // Anime soundtrack
+  fill(235, 205, 75);
+  circle(950, 330, 10);
+  fill(220);
+  text("Anime soundtrack", 965, 334);
+
+  // Movie soundtrack
+  fill(150, 190, 210);
+  circle(950, 360, 10);
+  fill(220);
+  text("Movie soundtrack", 965, 364);
+
+  // Hip-hop
+  fill(100, 200, 110);
+  circle(950, 390, 10);
+  fill(220);
+  text("Hip-hop", 965, 394);
+
+  // Cloud rap
+  fill(190, 155, 220);
+  circle(950, 420, 10);
+  fill(220);
+  text("Cloud rap", 965, 424);
 }
