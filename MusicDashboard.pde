@@ -122,25 +122,25 @@ void draw() {
 
     // Assign colour according to its genre
     if (genre.equals("Rage")) {
-      fill(235, 75, 75);
+      fill(239, 48, 48);
     } else if (genre.equals("Trap")) {
-      fill(65, 145, 235);
+      fill(150, 59, 219);
     } else if (genre.equals("Ambient")) {
-      fill(155, 105, 225);
+      fill(168, 230, 138);
     } else if (genre.equals("Alternative rap")) {
-      fill(235, 165, 65);
+      fill(23, 43, 112);
     } else if (genre.equals("EDM")) {
-      fill(55, 205, 180);
+      fill(101, 201, 245);
     } else if (genre.equals("Dancehall")) {
-      fill(235, 105, 170);
+      fill(255, 20, 147);
     } else if (genre.equals("Anime soundtrack")) {
-      fill(235, 205, 75);
+      fill(139, 0, 0);
     } else if (genre.equals("Movie soundtrack")) {
-      fill(150, 190, 210);
+      fill(85, 184, 120);
     } else if (genre.equals("Hip-hop")) {
-      fill(100, 200, 110);
+      fill(48, 16, 68);
     } else if (genre.equals("Cloud rap")) {
-      fill(190, 155, 220);
+      fill(208, 208, 208);
     } else {
       fill(200);
     }
@@ -202,62 +202,62 @@ void drawGenreKey() {
   text("GENRE KEY", 940, 120);
 
   // Rage
-  fill(235, 75, 75);
+  fill(239, 48, 48);
   circle(950, 150, 10);
   fill(220);
   textSize(12);
   text("Rage", 965, 154);
 
   // Trap
-  fill(65, 145, 235);
+  fill(150, 59, 219);
   circle(950, 180, 10);
   fill(220);
   text("Trap", 965, 184);
 
   // Ambient
-  fill(155, 105, 225);
+  fill(168, 230, 138);
   circle(950, 210, 10);
   fill(220);
   text("Ambient", 965, 214);
 
   // Alternative rap
-  fill(235, 165, 65);
+  fill(23, 43, 112);
   circle(950, 240, 10);
   fill(220);
   text("Alternative rap", 965, 244);
 
   // EDM
-  fill(55, 205, 180);
+  fill(101, 201, 245);
   circle(950, 270, 10);
   fill(220);
   text("EDM", 965, 274);
 
   // Dancehall
-  fill(235, 105, 170);
+  fill(255, 20, 147);
   circle(950, 300, 10);
   fill(220);
   text("Dancehall", 965, 304);
 
   // Anime soundtrack
-  fill(235, 205, 75);
+  fill(139, 0, 0);
   circle(950, 330, 10);
   fill(220);
   text("Anime soundtrack", 965, 334);
 
   // Movie soundtrack
-  fill(150, 190, 210);
+  fill(85, 184, 120);
   circle(950, 360, 10);
   fill(220);
   text("Movie soundtrack", 965, 364);
 
   // Hip-hop
-  fill(100, 200, 110);
+  fill(48, 16, 68);
   circle(950, 390, 10);
   fill(220);
   text("Hip-hop", 965, 394);
 
   // Cloud rap
-  fill(190, 155, 220);
+  fill(208, 208, 208);
   circle(950, 420, 10);
   fill(220);
   text("Cloud rap", 965, 424);
