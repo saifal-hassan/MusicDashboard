@@ -228,13 +228,13 @@ void drawGenreKey() {
 
   // EDM
   fill(101, 201, 245);
-  circle(950, 270, 10);
+  circle(951, 270, 10);
   fill(220);
   text("EDM", 965, 274);
 
   // Dancehall
   fill(255, 20, 147);
-  circle(950, 300, 10);
+  circle(951, 300, 10);
   fill(220);
   text("Dancehall", 965, 304);
 
@@ -245,8 +245,8 @@ void drawGenreKey() {
   text("Anime soundtrack", 965, 334);
 
   // Movie soundtrack
-  fill(85, 184, 120);
-  circle(950, 360, 10);
+  fill(84, 184, 120);
+  circle(951, 360, 10);
   fill(220);
   text("Movie soundtrack", 965, 364);
 
